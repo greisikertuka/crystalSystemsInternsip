@@ -1,4 +1,5 @@
 package Threads.Ushtrime;
+
 /* Simple Java program to demonstrate how to use multiple threads.
  Steps to use multiple threads in Java :
         1. Implement Runnable interface to put the code
@@ -9,10 +10,12 @@ package Threads.Ushtrime;
  execute the code in separate thread.*/
 public class ThreadExample5 {
     private static class ParallelTask implements Runnable {
-        @Override public void run() {
+        @Override
+        public void run() {
             System.out.println(Thread.currentThread().getName() + " is executing this code");
         }
     }
+
     public static void main(String[] args) {
         // created three threads but none will start
         // until you call start() method

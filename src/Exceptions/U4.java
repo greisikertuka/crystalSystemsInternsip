@@ -1,12 +1,16 @@
 package Exceptions;
-class Base extends Exception {}
-class Derived extends Base  {}
+
+class Base extends Exception {
+}
+
+class Derived extends Base {
+}
+
 public class U4 {
     public static void main(String args[]) {
         try {
             throw new Derived();
-        }
-        catch(Base b)     {
+        } catch (Base b) {
             System.out.println("Caught base class exception");
         }
         /*

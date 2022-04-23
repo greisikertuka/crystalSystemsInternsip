@@ -14,20 +14,22 @@
 */
 
 package Files;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.lang.IllegalStateException;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
+
 public class U4 {
     private static Scanner input;
+
     public static void main(String[] args) {
 // TODO Auto-generated method stub
 // hap file-in per lexim
         try {
             input = new Scanner(new File("numrat.txt"));
-        }
-        catch (FileNotFoundException fileNotFoundException) {
+        } catch (FileNotFoundException fileNotFoundException) {
             System.err.println("Error ne hapjen e file-it.");
             System.exit(1);
         }
@@ -36,6 +38,7 @@ public class U4 {
         if (input != null)
             input.close();
     }
+
     public static void shumaNegative(Scanner input) {
         int shuma = 0;
         int n = 0;
@@ -50,16 +53,14 @@ public class U4 {
                 System.out.println(shuma);
 // nese shuma eshte negative afishohet kjo shume dhe se sa numra jane mbledhur
                 if (shuma < 0)
-                    System.out.println("Shuma negative " + shuma + " pas"+
-                           " mbledhjes se " + n + " numrave te pare");
+                    System.out.println("Shuma negative " + shuma + " pas" +
+                            " mbledhjes se " + n + " numrave te pare");
             }
-        }
-        catch (NoSuchElementException elementException) {
+        } catch (NoSuchElementException elementException) {
             System.err.println("File nuk eshte ne formatin e duhur.");
             input.close();
             System.exit(1);
-        }
-        catch (IllegalStateException stateException) {
+        } catch (IllegalStateException stateException) {
             System.err.println("Error ne leximin e file.");
             System.exit(1);
         }

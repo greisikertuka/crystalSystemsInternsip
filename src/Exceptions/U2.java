@@ -1,15 +1,15 @@
 package Exceptions;
+
 class Test extends Exception {
-    }
+}
+
 class U2 {
     public static void main(String args[]) {
         try {
             throw new Test();
-        }
-        catch(Test t) {
+        } catch (Test t) {
             System.out.println("Got the Test Exception");
-        }
-        finally {
+        } finally {
             System.out.println("Inside finally block ");
         }
     }

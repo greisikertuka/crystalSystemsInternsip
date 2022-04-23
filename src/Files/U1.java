@@ -6,37 +6,37 @@ Numri i studentëve nuk është i përcaktuar.
         Studenti2 6, 8, 9, 7, 9
         */
 package Files;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.lang.IllegalStateException;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 import java.util.Formatter;
+
 public class U1 {
     private static Scanner input;
     private static Formatter output;
+
     public static void main(String[] args) {
 // TODO Auto-generated method stub
 // hapja e file-it per lexim
         try {
             input = new Scanner(new File("notat.txt"));
-            }
-        catch (FileNotFoundException fileNotFoundException) {
+        } catch (FileNotFoundException fileNotFoundException) {
             System.err.println("Error ne hapjen e file-it.");
             System.exit(1);
-            }
+        }
 // hapja e file-it per shkrim
         try {
             output = new Formatter("maksimale.txt");
-            }
-        catch (SecurityException securityException) {
+        } catch (SecurityException securityException) {
             System.err.println("Ti nuk ke te drejta shkrimi ne kete file.");
             System.exit(1); // perfundo programin
-            }
-        catch (FileNotFoundException fileNotFoundException) {
+        } catch (FileNotFoundException fileNotFoundException) {
             System.err.println("Error ne hapjen ose krijimin e file-it.");
             System.exit(1); // perfundo programin
-            }
+        }
 // leximi i te dhenave per cdo student
         while (input.hasNextLine()) {
             try {
@@ -62,6 +62,7 @@ public class U1 {
             input.close();
         output.close();
     }
+
     public static int getMax(String[] nr) {
         int max = Integer.parseInt(nr[0]);
         for (int i = 1; i < 4; i++) {

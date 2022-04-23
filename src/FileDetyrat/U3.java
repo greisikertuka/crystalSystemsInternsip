@@ -4,7 +4,9 @@ the characters ’/’, ’;’, or ’%’. The name of the file should be give
 */
 
 package FileDetyrat;
+
 import java.io.*;
+
 public class U3 {
     public static void main(String[] args) throws IOException {
 // Hapja e file per lexim
@@ -12,8 +14,8 @@ public class U3 {
 // Krijojme objektin per lexim
         BufferedReader in = new BufferedReader(f);
         String line = in.readLine();
-        while(line!=null){
-            if(line.charAt(0)=='/'||line.charAt(0)==';'||line.charAt(0)=='%')
+        while (line != null) {
+            if (line.charAt(0) == '/' || line.charAt(0) == ';' || line.charAt(0) == '%')
                 System.out.println(line);
             line = in.readLine();
         }

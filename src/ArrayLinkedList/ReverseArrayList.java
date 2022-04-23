@@ -1,6 +1,8 @@
 package ArrayLinkedList;
+
 import java.util.ArrayList;
 import java.util.Collections;
+
 public class ReverseArrayList {
     public static void main(String[] args) {
         ArrayList<String> l = new ArrayList<String>();

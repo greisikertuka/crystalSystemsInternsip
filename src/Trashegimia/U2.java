@@ -1,4 +1,5 @@
 package Trashegimia;
+
 class Animall {
 
     // method in the superclass

@@ -1,4 +1,5 @@
 package Trashegimia;
+
 class Animal1 {
     // method in the superclass
     public void eat() {

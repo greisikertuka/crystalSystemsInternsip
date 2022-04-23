@@ -22,10 +22,10 @@ class IOFilee {
     static int countLines() throws IOException {
         BufferedReader br = new BufferedReader(new FileReader(emriFile));
 
-        String str=br.readLine();
-        while (str!=null){
+        String str = br.readLine();
+        while (str != null) {
             nr_rreshtash++;
-            str=br.readLine();
+            str = br.readLine();
         }
         br.close();
         return nr_rreshtash;
@@ -42,7 +42,7 @@ class IOFilee {
         BufferedReader br = new BufferedReader(new FileReader(emriFile));
         String s = br.readLine();
         System.out.println(s);
-        for(int i = 0; i < nr_rreshtash-1; ++i) {
+        for (int i = 0; i < nr_rreshtash - 1; ++i) {
             s = br.readLine();
             System.out.println(s);
         }
@@ -53,7 +53,7 @@ class IOFilee {
         BufferedReader in = new BufferedReader(new FileReader(emriFile));
         PrintWriter pw = new PrintWriter(new FileWriter(e));
         String s;
-        for(int i = 0; i < nr_rreshtash; ++i) {
+        for (int i = 0; i < nr_rreshtash; ++i) {
             s = in.readLine();
             pw.println(s);
         }
@@ -66,6 +66,7 @@ class IOFilee {
         System.out.println(f.delete());
     }
 }
+
 public class U6 {
     public static void main(String[] args) {
         IOFilee var1 = new IOFilee("u66.txt");
@@ -81,7 +82,7 @@ public class U6 {
             IOFilee.copy(s);
             System.out.println("Do ndryshohet permbajtja e file!");
             OutputStream os = null;
-            IOFilee.write((OutputStream)os);
+            IOFilee.write((OutputStream) os);
         } catch (IOException var5) {
             var5.printStackTrace();
         }

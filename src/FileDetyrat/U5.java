@@ -11,20 +11,21 @@ import java.io.FileNotFoundException;
 import java.lang.IllegalStateException;
 import java.util.Scanner;
 import java.util.Formatter;
+
 public class U5 {
     static Scanner input;
+
     public static void main(String[] args) {
 // hapja e file-it per lexim
         try {
             input = new Scanner(new File("notat1.txt"));
-        }
-        catch (FileNotFoundException fileNotFoundException) {
+        } catch (FileNotFoundException fileNotFoundException) {
             System.err.println("Error ne hapjen e file-it.");
             System.exit(1);
         }
-        int m1=0,m=0;
-        double[] mesatare=new double[100];
-        String[] emri=new String[100];
+        int m1 = 0, m = 0;
+        double[] mesatare = new double[100];
+        String[] emri = new String[100];
         while (input.hasNextLine()) {
             emri[m1] = input.next();
             String[] nr = input.nextLine().trim().split(" ");
@@ -33,19 +34,20 @@ public class U5 {
         }
         if (input != null)
             input.close();
-        int max=0;
-        for(int i=0;i<mesatare.length;i++) {
-            if(mesatare[i]>mesatare[max])
-                max=i;
+        int max = 0;
+        for (int i = 0; i < mesatare.length; i++) {
+            if (mesatare[i] > mesatare[max])
+                max = i;
         }
-        System.out.println("\nStudenti me mesataren me te larte: "+emri[max]+" me mesatare: " +
-                ""+mesatare[max]);
+        System.out.println("\nStudenti me mesataren me te larte: " + emri[max] + " me mesatare: " +
+                "" + mesatare[max]);
     }
+
     public static double getMes(String[] nr) {
         double mes = Integer.parseInt(nr[0]);
-        for (int i = 1; i <nr.length; i++) {
-                mes += Integer.parseInt(nr[i]);
+        for (int i = 1; i < nr.length; i++) {
+            mes += Integer.parseInt(nr[i]);
         }
-        return mes/nr.length;
+        return mes / nr.length;
     }
 }

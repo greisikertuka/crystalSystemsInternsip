@@ -2,16 +2,18 @@
 të gjuhes shqipe përseritet më shpesh në një file tekst.
 */
 package Files;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.lang.IllegalStateException;
 import java.util.Arrays;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
+
 public class U2 {
     public static void main(String[] args) {
 // TODO Auto-generated method stub
-        String[] dyshe = { "dh", "gj", "ll", "nj", "rr", "sh", "th", "xh", "zh" };
+        String[] dyshe = {"dh", "gj", "ll", "nj", "rr", "sh", "th", "xh", "zh"};
         int[] frekuenca = new int[9];
         Scanner input;
         try {
@@ -40,6 +42,7 @@ public class U2 {
             System.err.println("File nuk ekziston");
         }
     }
+
     // gjen indeksin e shkronjes qe perseritet me shpesh
     public static int gjejMax(int[] f) {
         int max = f[0];

@@ -1,22 +1,25 @@
 package aaa;
+
 import java.util.Scanner;
 import java.util.ArrayList;
-class Lexo{
-    ArrayList<Integer> pos=new ArrayList<Integer>();
-    ArrayList<Integer> neg=new ArrayList<Integer>();
-    Lexo(int [][] v){
-        for(int i=0;i<v.length;i++){
-            for(int j=0;j<v[0].length;j++){
-                if(v[i][j]>0){
+
+class Lexo {
+    ArrayList<Integer> pos = new ArrayList<Integer>();
+    ArrayList<Integer> neg = new ArrayList<Integer>();
+
+    Lexo(int[][] v) {
+        for (int i = 0; i < v.length; i++) {
+            for (int j = 0; j < v[0].length; j++) {
+                if (v[i][j] > 0) {
                     pos.add(v[i][j]);
-                }
-                else if(v[i][j]<0){
+                } else if (v[i][j] < 0) {
                     neg.add(v[i][j]);
                 }
             }
         }
     }
 }
+
 public class U3 {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
@@ -31,7 +34,7 @@ public class U3 {
             }
         }
         Lexo l = new Lexo(v);
-        System.out.println("ArrayListi pozitiv: "+l.pos);
-        System.out.println("ArrayListi negativ: "+l.neg);
+        System.out.println("ArrayListi pozitiv: " + l.pos);
+        System.out.println("ArrayListi negativ: " + l.neg);
     }
 }

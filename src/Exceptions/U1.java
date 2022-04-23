@@ -1,4 +1,5 @@
 package Exceptions;
+
 class U1 {
     public static void main(String args[]) {
         /*try {

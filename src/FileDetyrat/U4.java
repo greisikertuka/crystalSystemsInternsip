@@ -10,18 +10,18 @@ import java.io.*;
 import java.util.Scanner;
 
 public class U4 {
-    static void tabeleShumezimi(String s,int n){
-        FileWriter f= null;
+    static void tabeleShumezimi(String s, int n) {
+        FileWriter f = null;
         try {
             f = new FileWriter(s);
         } catch (IOException e) {
             e.printStackTrace();
         }
-        PrintWriter pw=new PrintWriter(f);
-        for (int i=0;i<n;i++){
-            if(i==0)System.out.println("Po shkruhen te dhenat ne file!");
-            for (int j=0;j<n;j++){
-                pw.print((j+1)*(i+1)+"  ");
+        PrintWriter pw = new PrintWriter(f);
+        for (int i = 0; i < n; i++) {
+            if (i == 0) System.out.println("Po shkruhen te dhenat ne file!");
+            for (int j = 0; j < n; j++) {
+                pw.print((j + 1) * (i + 1) + "  ");
             }
             pw.println();
         }
@@ -34,10 +34,11 @@ public class U4 {
         }
 
     }
+
     public static void main(String[] args) {
-         Scanner scn=new Scanner(System.in);
-         System.out.println("Jep emrin e file dhe madhesine e tabeles se shumezimit:");
-         tabeleShumezimi(scn.next(),scn.nextInt());
-         scn.close();
+        Scanner scn = new Scanner(System.in);
+        System.out.println("Jep emrin e file dhe madhesine e tabeles se shumezimit:");
+        tabeleShumezimi(scn.next(), scn.nextInt());
+        scn.close();
     }
 }

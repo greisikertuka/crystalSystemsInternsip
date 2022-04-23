@@ -4,15 +4,18 @@ dhe shkruan në një skedar të ri gjithë fjalët që nuk përmbajnë
 gërmën d dhe i.
 */
 package Files;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.lang.IllegalStateException;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 import java.util.Formatter;
+
 public class U3 {
     private static Scanner input;
     private static Formatter output;
+
     public static void main(String[] args) {
 // TODO Auto-generated method stub
 // hapja e file-it per lexim

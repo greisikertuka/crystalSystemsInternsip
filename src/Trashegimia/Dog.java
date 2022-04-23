@@ -1,11 +1,14 @@
 package Trashegimia;
+
 class Animal {
     // field and method of the parent class
     String name;
+
     public void eat() {
         System.out.println("I can eat");
     }
 }
+
 // inherit from Animal
 class Dog extends Animal {
 
@@ -27,4 +30,5 @@ class Dog extends Animal {
         // using object of subclass
         labrador.eat();
 
-    }}
+    }
+}

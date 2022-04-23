@@ -1,9 +1,10 @@
 package Exceptions;
+
 class U3 {
     public static void main(String args[]) {
         int x = 0;
         int y = 10;
-        int z = y/x;
+        int z = y / x;
     }
 }
 /*

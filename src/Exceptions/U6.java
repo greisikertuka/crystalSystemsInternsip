@@ -1,20 +1,16 @@
 package Exceptions;
-class U6
-{
-    public static void main(String[] args)
-    {
-        try
-        {
-            int a[]= {1, 2, 3, 4};
-            for (int i = 1; i <= 4; i++)
-            {
-                System.out.println ("a[" + i + "]=" + a[i] + "\n");
+
+class U6 {
+    public static void main(String[] args) {
+        try {
+            int a[] = {1, 2, 3, 4};
+            for (int i = 1; i <= 4; i++) {
+                System.out.println("a[" + i + "]=" + a[i] + "\n");
             }
         }
 //catch exception I eleminon te gjitha exceptionat e tjere
-        catch (Exception e)
-        {
-            System.out.println ("error = " + e);
+        catch (Exception e) {
+            System.out.println("error = " + e);
         }
 
         /*catch (ArrayIndexOutOfBoundsException e)

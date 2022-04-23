@@ -1,6 +1,8 @@
 package Files1;
+
 import java.io.*;
 import java.net.*;
+
 public class IOStreams {
     public static void readWrite(InputStream in, OutputStream out) throws IOException {
         InputStreamReader isr = new InputStreamReader(in);
@@ -12,6 +14,7 @@ public class IOStreams {
             line = br.readLine();
         }
     }
+
     public static void main(String[] args) throws IOException {
 // Reads from the Internet and writes to a file
         System.out.println("*** Internet -> File ***");

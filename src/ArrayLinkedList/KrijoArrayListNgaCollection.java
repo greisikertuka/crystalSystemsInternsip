@@ -1,6 +1,8 @@
 package ArrayLinkedList;
+
 import java.util.ArrayList;
 import java.util.List;
+
 public class KrijoArrayListNgaCollection {
     public static void main(String[] args) {
         List<Integer> firstFivePrimeNumbers = new ArrayList<>();
